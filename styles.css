@@ -1,0 +1,294 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #fcf5e9;
+    --dark-color: #333;
+    --container-normal: 1100px;
+    --container-wide: 1400px;
+    --container-narrow: 900px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Utility Classes */
+
+.bg-primary {
+    background-color: var(--primary-color);
+    color: #333;
+}
+
+.bg-dark {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.bg-dark .bg-primary {
+    padding: 0 0.3rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+.container {
+    max-width: var(--container-normal);
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.container-lg {
+    max-width: var(--container-wide);
+}
+
+.container-sm {
+    max-width: var(--container-narrow);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.6rem;
+}
+
+
+/* Header */
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem auto;
+}
+
+.logo {
+    width: 130px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-right a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+.header-right a:hover {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+}
+
+.header-right .current {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+/* Hero Text */
+
+.hero {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+/* Gallery section */
+
+
+.gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: calc(33.333% - 20px);
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    border-radius: 10px;
+}
+
+.gallery-item a:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+
+.footer {
+    border-top: 1px solid #aaa;
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social i {
+    padding: 0 3px;
+}
+
+/* Services */
+
+.services {
+    padding: 3rem 0 4rem;
+}
+
+
+.service-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+
+.service-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Team */
+
+.team {
+    margin: 40px auto;
+}
+
+.team-flex {
+    display: flex;
+    gap: 1.4rem;
+    padding-bottom: 40px;
+}
+
+.team-item img {
+    border-radius: 10px;
+}
+
+/* Contact */
+
+.contact {
+    padding: 3rem 0 4rem;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin: 2rem 0;  
+}
+
+.contact input, .contact textarea {
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding-bottom: 1rem;
+} 
+
+.contact textarea {
+    height: 200px; 
+}
+
+.contact input:focus, .contact textarea:focus {
+    outline: none;
+}
+
+ 
+
+/* Media Queries */
+
+@media(max-width: 768px) {
+    
+    .header-flex, .service-flex, .team-flex {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+
+    .footer-flex {
+        flex-direction: column; 
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+}
